@@ -1,10 +1,214 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
-    <title>n2geoff</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grayscale CSS</title>
+    <link rel="stylesheet" id="grayscale" href="css/grayscale.min.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <style id="dynamic"></style>
 </head>
 <body>
-    <p>GitHub Hosted Page</p>
+    <!--
+        This page is derived from the water.css demo by Kognise.
+        For the license see
+        https://github.com/kognise/water.css/blob/master/LICENSE.md
+    -->
+    <main>
+        <section>
+            <section class="grid">
+                <div>
+                    <div class="box" style="background: var(--fg);">&nbsp;</div>
+                    <div class="box" style="background: var(--dark);">&nbsp;</div>
+                    <div class="box" style="background: var(--theme);">&nbsp;</div>
+                    <div class="box" style="background: var(--light);">&nbsp;</div>
+                    <div class="box" style="background: var(--gray);">&nbsp;</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="box" style="background: var(--bg); color: var(--theme)">
+                        GRAYSCALE
+                    </div>
+                    <div class="box" style="background:var(--theme); padding: 0 .5em 0 .5em;">CSS</div>
+                </div>
+                <div style="text-align: right;">
+                    <em>CSS For Minimalists</em>
+                </div>
+            </section>
+            <article>
+                <section>
+                    <h2>Customize CSS</h2>
+                    <form id="settings" name="settings" style="background: var(--bg); padding: 1rem;">
+                        <div>
+                            <label for="theme">Theme Color <small>(default: steelblue)</small></label>
+                            <span style="float: right">
+                                <input type="checkbox" name="mode" id="mode" checked>
+                                <label for="mode">
+                                    Dark Mode
+                                </label>
+                            </span>
+                            <input type="color" id="theme" name="theme" value="#4086bf">
+                        </div>
+                        <div class="grid">
+                            <div>
+                                <label for="font">Font Family</label>
+                                <input type="text" id="font" name="font" value="Arial, Helvetica, san-serif">
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div>
+                                <label for="size">Font Size</label>
+                                <input type="number" id="size" name="size" value="20" min="8" max="40">
+                            </div>
+                            <div>
+                                <label for="line">Line Height</label>
+                                <input type="range" id="line" name="line" value="1.5" min="0" max="4" step="0.5">
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div>
+                                <label for="radius">Border Radius</label>
+                                <input type="range" name="radius" id="radius" min="0" max="1" step="0.05" value="0"
+                                    list="tickmarks">
+                            </div>
+                            <div>
+                                <label for="spacing">Element Spacing</label>
+                                <input type="range" id="spacing" name="spacing" min="0" max="4" step="0.05" value="1"
+                                    list="tickmarks">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <input type="submit" value="Download">
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <h2>Elements examples</h2>
+                <p>
+                    This is supposed to be a demo page so we need more elements!
+                </p>
+
+                <h3>Forms</h3>
+                <form>
+                    <div>
+                        <label for='email'>Email</label>
+                        <input type='email' name='email' id='email' placeholder='john.doe@gmail.com'>
+                    </div>
+
+                    <div>
+                        <label for='id'>User id (read only)</label>
+                        <input readonly name='id' id='id' value='04D6H89Z'>
+                    </div>
+
+                    <div>
+                        <label for='disabled'>Random disabled input</label>
+                        <input disabled name='disabled' id='disabled' placeholder='Because why not?'>
+                    </div>
+
+                    <div>
+                        <label for='selected'>Select Item</label>
+                        <select name="selected" id="">
+                            <option value="">Choose One</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for='about'>About me</label>
+                        <textarea name='about' id='about' placeholder='type some text...'></textarea>
+                    </div>
+
+                    <div>
+                        <input type='checkbox' name='remember' id='remember' checked>
+                        <label for='remember'>Remember me</label>
+                    </div>
+
+                    <p>
+                        <button>Cancel</button>
+                        <input type='submit'>
+                    </p>
+                </form>
+
+                <h3>Code</h3>
+                <p>
+                    Below is some code, you can copy it with <kbd>Ctrl-C</kbd>.
+                    Did you know, <code>alert(1)</code> can show an alert in JavaScript!
+                </p>
+                <pre><code>// This logs a message to the console<br>console.log('Hello, world!')</code></pre>
+
+                <h3>Other</h3>
+                <p>Here's a horizontal rule and image because I don't know where else to put them.</p>
+                <img src='http://via.placeholder.com/408x287' alt='Example image'>
+                <hr>
+
+                <p>And here's a nicely marked up table!</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Godzilla</td>
+                            <td>2</td>
+                            <td>$299.99</td>
+                        </tr>
+                        <tr>
+                            <td>Mozilla</td>
+                            <td>10</td>
+                            <td>$100,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>Quesadilla</td>
+                            <td>1</td>
+                            <td>$2.22</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Typography</h3>
+                <blockquote>
+                    This is a blockquote. Maecenas blandit, quam vel sodales facilisis, urna erat fringilla sem, sed
+                    egestas quam erat a ipsum. Morbi fermentum odio felis, ultricies faucibus purus mattis tristique.
+                </blockquote>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum hendrerit velit, quis
+                    ullamcorper sem congue ac. Quisque id magna rhoncus, sodales massa vel, vestibulum elit. Duis ornare
+                    accumsan egestas. Proin maximus lacus interdum leo molestie convallis. Orci varius natoque penatibus
+                    et magnis dis parturient montes, nascetur ridiculus mus. Ut iaculis risus eu felis feugiat, eu
+                    mollis neque elementum. Donec interdum, nisl id dignissim iaculis, felis dui aliquet dui, non
+                    fermentum velit lectus ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                    per inceptos himenaeos.
+                    <strong>This is strong,</strong> this is normal, <b>this is just bold,</b> <em>and this is
+                        emphasized!</em> And heck, <a href='/'>here</a>'s a link.
+                </p>
+                <ul>
+                    <li>Unordered list item 1</li>
+                    <li>Unordered list item 2</li>
+                    <li>Unordered list item 3</li>
+                </ul>
+                <ol>
+                    <li>Ordered list item 1</li>
+                    <li>Ordered list item 2</li>
+                    <li>Ordered list item 3</li>
+                </ol>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/grayscaled.min.js"></script>
 </body>
 </html>
