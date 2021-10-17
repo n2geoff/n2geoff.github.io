@@ -1,3 +1,2 @@
-@import url("https://cdn.jsdelivr.net/npm/grayscale-css@0.8.1/dist/grayscale.min.css");
-
-html{min-width:540px}h1{margin:0}.box{height:1.5em;min-width:1.5em;line-height:1.5em;margin:1px;display:inline-block;font-weight:700;letter-spacing:.2em;color:#fafafa}.none{display:none}.hero{display:grid;justify-content:center;align-content:center;text-align:center;height:90vh;margin:0 auto}.hero h1{font-size:48px;margin:0;padding:0}.center{text-align:center}code{background:var(--fg);color:var(--bg)}h4{margin:0}
+@import url("https://cdn.jsdelivr.net/npm/grayscale-css");
+html{min-width:540px}.large{font-size:48px}.box{height:1.5em;min-width:1.5em;line-height:1.5em;margin:1px;display:inline-block;font-weight:700;letter-spacing:.2em;color:#fafafa}.hero{display:grid;justify-content:center;align-content:center;text-align:center;height:100vh;margin:0 auto}.center{text-align:center}

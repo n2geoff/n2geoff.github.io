@@ -18,7 +18,7 @@
                 <div style="background: var(--gray);">&nbsp;</div>
             </div>
             <div>
-                <h1 style="color: var(--theme)">
+                <h1 class="large" style="color: var(--theme);">
                     GRAYSCALE
                     <span style="background:var(--theme); color: var(--fg);padding: 0 .5em 0 .5em;">CSS</span>
                 </h1>
@@ -27,49 +27,44 @@
                 <hr>
             </div>
             <div>
-                <a href="https://cdn.jsdelivr.net/npm/grayscale-css@0.8.1/dist/grayscale.min.css">CDN</a> |
+                <a href="https://cdn.jsdelivr.net/npm/grayscale-css">CDN</a> |
                 <a href="theme/">CUSTOMIZE</a> |
                 <a href="https://github.com/n2geoff/grayscale-css">GITHUB</a>
             </div>
         </section>
         
-        <section class="none">
-            <h2>FEATURES</h2>
-            <div class="grid">
-                <article>
-                    <header>
-                        <h3>CSS FOR MINIMALISTS</h3>
-                    </header>
+        <section class="hero">
+            <div class="center" style="font-size: calc(var(--size) * 1.5)">
+                <div>Tiny</div>
+                <div>Dynamic</div>
+                <div>Classless</div>
+                <p>
                     <div>
-                        <p>
-                            Grayscale CSS is a tiny-dynamic-classless css stylesheet designed 
-                            for rapid prototyping with a bit of flair. Use <strong>AS-IS</strong> or...
-                        </p>
-                        <p>
-                            <strong>CHANGE A SINGLE COLOR</strong> and 
-                            <strong>REDEFINE YOUR ENTIRE THEME</strong>, complete
-                            with <em>light</em> and <em>dark</em> modes.
-                        </p>
-                        <p>
-                            And its only 2kb
-                        </p>
+                        <strong>REDEFINE YOUR ENTIRE THEME</strong>
+                        with a <strong>SINGLE COLOR</strong>
                     </div>
-                </article>
+                    <div>
+                        <strong>LIGHT</strong> and <strong>DARK</strong> modes <em>baked right in!</em>
+                    </div>
+                    <div>
+                        <strong> Only 2kb!</strong> 
+                    </div>
+                </p>
             </div>
         </section>
-        <section class="none">
+        <section>
             <h2>SETUP</h2>
             <p></p>
             <article>
                 <h3>CDN</h3>
-                <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/grayscale-css@0.8.1/dist/grayscale.min.css"&gt;</code></pre>
+                <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/grayscale-css"&gt;</code></pre>
             </article>
             <article>
                 <h3>NPM</h3>
                 <pre><code>npm i grayscale-css</code></pre>
             </article>
         </section>
-        <section class="none">
+        <section>
             <h2>STYLES</h2>
             <article class="center">
                 <a href="#layout">Layout</a>
@@ -102,11 +97,12 @@
                             </div>
                             <div>
                                 <p><code>P</code> can simply be a paragraph</p>
-                                <p><code>A</code> can be <a href="./">a link</a></p>
+                                <p><code>A</code> can be a <a href="./">link</a></p>
                                 <p><code>STRONG</code> can be <strong>bold</strong></p>
                                 <p><code>U</code> can be <u>underlined</u></p>
                                 <p><code>EM</code> can be <em>emphasised</em></p>
                                 <p><code>SMALL</code> can be <small>small</small></p>
+                                <p><code>CODE</code> can be <code>code</code></p>
                             </div>
                         </div>
                         <div>
@@ -120,12 +116,15 @@
                             <code>HR</code>
                             <hr>
                         </div>
+                        <div>
+                            <code>CODE</code>
+                            <pre><code>alert('this could work!');</code></pre>
+                        </div>
                     </article>
                 </section>
                 <section>
                     <a name="lists"></a>
                     <h3>Lists</h3>
-                    <em>WIP -- These styles have not been normalized yet</em>
                     <article class="grid">
                         <ul>
                             <li>List Item</li>
@@ -139,6 +138,8 @@
                             <li>List Item</li>
                             <li>List Item</li>
                         </ol>
+                        <div></div>
+                        <div></div>
                     </article>
                 </section>
                 <section>
@@ -195,10 +196,48 @@
                 <section>
                     <a name="table"></a>
                     <h3>Tables</h3>
+                    <article>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>One</th>
+                                    <th>Two</th>
+                                    <th>There</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                </tr>
+                                <tr>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                </tr>
+                                <tr>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
                 </section>
                 <section>
                     <a name="utilities"></a>
                     <h3>Utility</h3>
+                    <article>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th><code>.grid</code></th>
+                                    <td>dynamic grid layout helper</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
                 </section>
             </article>
         </section>
