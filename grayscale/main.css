@@ -1,2 +1,2 @@
-@import url("https://cdn.jsdelivr.net/npm/grayscale-css");
+@import url("https://cdn.jsdelivr.net/npm/grayscale-css@latest");
 html{min-width:540px}.large{font-size:48px}.box{height:1.5em;min-width:1.5em;line-height:1.5em;margin:1px;display:inline-block;font-weight:700;letter-spacing:.2em;color:#fafafa}.hero{display:grid;justify-content:center;align-content:center;text-align:center;height:100vh;margin:0 auto}.center{text-align:center}
