@@ -7,14 +7,11 @@
         <title>Grayscale CSS</title>
         <link rel="stylesheet" id="grayscale" href="grayscale.min.css" />
         <link rel="stylesheet" href="styles.css" />
-        <style id="dynamic"></style>
+        <style id="dynamic">
+            blockquote {color: var(--hint)}
+        </style>
     </head>
     <body>
-        <!--
-            This page is derived from the water.css demo by Kognise.
-            For the license see
-            https://github.com/kognise/water.css/blob/master/LICENSE.md
-        -->
         <main>
             <section>
                 <section class="grid">
@@ -91,13 +88,16 @@
                     <h3>Form elements</h3>
                     <form>
                         <div>
-                            <label for='email'>Email</label>
-                            <input type='email' name='email' id='email' placeholder='john.doe@gmail.com'>
-                        </div>
-
-                        <div>
                             <label for='id'>User id (read only)</label>
-                            <input readonly name='id' id='id' value='04D6H89Z'>
+                            <input name='id' id='id' value='R2D2' readonly>
+                        </div>
+                        <div>
+                            <label for='email'>Email</label>
+                            <input type='email' name='email' id='email' placeholder='email@example.com'>
+                        </div>
+                        <div>
+                            <label for='password'>Password</label>
+                            <input type='password' name='password' id='password'>
                         </div>
 
                         <div>
@@ -106,11 +106,11 @@
                         </div>
 
                         <div>
-                            <label for='selected'>Select Item</label>
+                            <label for='selected'>Prefered theme</label>
                             <select name="selected" id="">
                                 <option value="">Choose One</option>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
                             </select>
                         </div>
 
@@ -137,12 +137,12 @@
                     </p>
                     <pre><code>// This logs a message to the console<br>console.log('Hello, world!')</code></pre>
 
-                    <h3>Other</h3>
+                    <h3>other</h3>
                     <p>Here's a horizontal rule and image because I don't know where else to put them.</p>
                     <img src='http://via.placeholder.com/408x287' alt='Example image'>
                     <hr>
 
-                    <p>And here's a nicely marked up table!</p>
+                    <h3>tables</h3>
                     <table>
                         <thead>
                             <tr>
