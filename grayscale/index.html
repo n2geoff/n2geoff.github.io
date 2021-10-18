@@ -79,13 +79,46 @@
                     <a name="layout"></a>
                     <h3>Layout</h3>
                     <article>
-                        <code>DIV</code> is so boring
+                        <code>DIV</code> is not the only tag avalible to your designs.
+                        <p>
+                            Want to mimic the <code>.container</code> class you find in other 
+                            frameworks, wrap your code in <code>MAIN</code>
+                        </p>
+                        <p>
+                            Need to divide major sections of your code, use <code>SECTION</code> 
+                        </p>
+                        <p>
+                            And if you need a little extra flair, do what is done here and place content
+                            in a <code>ARTICLE</code>
+                        </p>
                     </article>
                 </section>
                 <section>
                     <a name="type"></a>
                     <h3>Typography</h3>
                     <article>
+                        <div>
+                            <blockquote>
+                                The alternative to good design is always bad design. there is no such thing as no design.
+                                Simplicity carried to an extreme, becomes elegance.
+                                    <cite>-- Adam Judge</cite>
+                            </blockquote>
+                            <p>
+                                <code>P</code>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum luctus arcu,
+                                eu faucibus ex. Ut consequat lorem eget aliquet semper. Praesent quis vestibulum ante,
+                                id tristique leo. Etiam sed congue lacus. Nunc ut ornare metus. Suspendisse tincidunt in
+                                odio eu faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                facilisi.
+                            </p>
+                            <p>
+                                <code>STRONG</code>
+                                <strong id="generated">Generated 1 paragraph, 52 words, 354 bytes of 
+                                    <a href="https://www.lipsum.com/" title="Lorem Ipsum">Lorem Ipsum</a>
+                                </strong>
+                            </p>
+                            <hr>
+                        </div>
                         <div class="grid">
                             <div>
                                 <h1><code>H1</code>Heading...</h1>
@@ -106,19 +139,18 @@
                             </div>
                         </div>
                         <div>
-                            <blockquote>
-                                <code>BLOCKQUOTE</code>
-                                Simplicity carried to an extreme, becomes elegance.
-                                <cite>-- John Franklin</cite>
-                            </blockquote>
-                        </div>
-                        <div>
                             <code>HR</code>
                             <hr>
                         </div>
                         <div>
-                            <code>CODE</code>
+                            <code>PRE &gt; CODE</code>
                             <pre><code>alert('this could work!');</code></pre>
+                        </div>
+                        <div>
+                            <div>
+                                <code>IMG</code>
+                            </div>
+                            <img src='http://via.placeholder.com/340x280' alt='Example image'>
                         </div>
                     </article>
                 </section>
@@ -126,18 +158,24 @@
                     <a name="lists"></a>
                     <h3>Lists</h3>
                     <article class="grid">
-                        <ul>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                        </ul>
-                        <ol>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                        </ol>
+                        <div>
+                            <code>UL</code>
+                            <ul>
+                                <li><code>LI</code>List Item</li>
+                                <li><code>LI</code>List Item</li>
+                                <li><code>LI</code>List Item</li>
+                                <li><code>LI</code>List Item</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <code>OL</code>
+                            <ol>
+                                <li><code>LI</code>List Item</li>
+                                <li><code>LI</code>List Item</li>
+                                <li><code>LI</code>List Item</li>
+                                <li><code>LI</code>List Item</li>
+                            </ol>
+                        </div>
                         <div></div>
                         <div></div>
                     </article>

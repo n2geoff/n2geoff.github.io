@@ -79,130 +79,227 @@
                             </div>
                         </form>
                     </section>
-
-                    <h2>Element examples</h2>
-                    <p>
-                        This is supposed to be a demo page so we need more elements!
-                    </p>
-
-                    <h3>Form elements</h3>
-                    <form>
-                        <div>
-                            <label for='id'>User id (read only)</label>
-                            <input name='id' id='id' value='R2D2' readonly>
-                        </div>
-                        <div>
-                            <label for='email'>Email</label>
-                            <input type='email' name='email' id='email' placeholder='email@example.com'>
-                        </div>
-                        <div>
-                            <label for='password'>Password</label>
-                            <input type='password' name='password' id='password'>
-                        </div>
-
-                        <div>
-                            <label for='disabled'>Random disabled input</label>
-                            <input disabled name='disabled' id='disabled' placeholder='Because why not?'>
-                        </div>
-
-                        <div>
-                            <label for='selected'>Prefered theme</label>
-                            <select name="selected" id="">
-                                <option value="">Choose One</option>
-                                <option value="light">Light</option>
-                                <option value="dark">Dark</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for='about'>About me</label>
-                            <textarea name='about' id='about' placeholder='I am a textarea...'></textarea>
-                        </div>
-
-                        <div>
-                            <input type='checkbox' name='remember' id='remember' checked>
-                            <label for='remember'>Remember me</label>
-                        </div>
-
-                        <p>
-                            <button>Cancel</button>
-                            <input type='submit'>
-                        </p>
-                    </form>
-
-                    <h3>Code</h3>
-                    <p>
-                        Below is some code, you can copy it with <kbd>Ctrl-C</kbd>.
-                        Did you know, <code>alert(1)</code> can show an alert in JavaScript!
-                    </p>
-                    <pre><code>// This logs a message to the console<br>console.log('Hello, world!')</code></pre>
-
-                    <h3>other</h3>
-                    <p>Here's a horizontal rule and image because I don't know where else to put them.</p>
-                    <img src='http://via.placeholder.com/408x287' alt='Example image'>
-                    <hr>
-
-                    <h3>tables</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Godzilla</td>
-                                <td>2</td>
-                                <td>$299.99</td>
-                            </tr>
-                            <tr>
-                                <td>Mozilla</td>
-                                <td>10</td>
-                                <td>$100,000.00</td>
-                            </tr>
-                            <tr>
-                                <td>Quesadilla</td>
-                                <td>1</td>
-                                <td>$2.22</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h3>Typography</h3>
-                    <blockquote>
-                        This is a blockquote. Maecenas blandit, quam vel sodales facilisis, urna erat fringilla sem, sed
-                        egestas quam erat a ipsum. Morbi fermentum odio felis, ultricies faucibus purus mattis tristique.
-                    </blockquote>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum hendrerit velit, quis
-                        ullamcorper sem congue ac. Quisque id magna rhoncus, sodales massa vel, vestibulum elit. Duis ornare
-                        accumsan egestas. Proin maximus lacus interdum leo molestie convallis. Orci varius natoque penatibus
-                        et magnis dis parturient montes, nascetur ridiculus mus. Ut iaculis risus eu felis feugiat, eu
-                        mollis neque elementum. Donec interdum, nisl id dignissim iaculis, felis dui aliquet dui, non
-                        fermentum velit lectus ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-                        per inceptos himenaeos.
-                        <strong>This is strong,</strong> this is normal, <b>this is just bold,</b> <em>and this is
-                            emphasized!</em> And heck, <a href='/'>here</a>'s a link.
-                    </p>
-                    <ul>
-                        <li>Unordered list item 1</li>
-                        <li>Unordered list item 2</li>
-                        <li>Unordered list item 3</li>
-                    </ul>
-                    <ol>
-                        <li>Ordered list item 1</li>
-                        <li>Ordered list item 2</li>
-                        <li>Ordered list item 3</li>
-                    </ol>
-                    <h1>Heading 1</h1>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <h5>Heading 5</h5>
-                    <h6>Heading 6</h6>
                 </article>
+                    <section>
+                        <h2>STYLES</h2>
+                        <p>
+                            <article>
+                                <a href="#layout">Layout</a>
+                                <a href="#type">Typography</a>
+                                <a href="#forms">Forms</a>
+                                <a href="#table">Tables</a>
+                                <a href="#utilities">Utilities</a>
+                                &nbsp;
+                            </article>
+                        </p>
+                        <article>
+                            <section>
+                                <a name="layout"></a>
+                                <h3>Layout</h3>
+                                <article>
+                                    <code>DIV</code> is not the only tag avalible to your designs.
+                                    <p>
+                                        Want to mimic the <code>.container</code> class you find in other 
+                                        frameworks, wrap your code in <code>MAIN</code>
+                                    </p>
+                                    <p>
+                                        Need to divide major sections of your code, use <code>SECTION</code> 
+                                    </p>
+                                    <p>
+                                        And if you need a little extra flair, do what is done here and place content
+                                        in a <code>ARTICLE</code>
+                                    </p>
+                                </article>
+                            </section>
+                            <section>
+                                <a name="type"></a>
+                                <h3>Typography</h3>
+                                <article>
+                                    <div>
+                                        <blockquote>
+                                            The alternative to good design is always bad design. there is no such thing as no design.
+                                            Simplicity carried to an extreme, becomes elegance.
+                                                <cite>-- Adam Judge</cite>
+                                        </blockquote>
+                                        <p>
+                                            <code>P</code>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum luctus arcu,
+                                            eu faucibus ex. Ut consequat lorem eget aliquet semper. Praesent quis vestibulum ante,
+                                            id tristique leo. Etiam sed congue lacus. Nunc ut ornare metus. Suspendisse tincidunt in
+                                            odio eu faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                            facilisi.
+                                        </p>
+                                        <p>
+                                            <code>STRONG</code>
+                                            <strong id="generated">Generated 1 paragraph, 52 words, 354 bytes of 
+                                                <a href="https://www.lipsum.com/" title="Lorem Ipsum">Lorem Ipsum</a>
+                                            </strong>
+                                        </p>
+                                        <hr>
+                                    </div>
+                                    <div class="grid">
+                                        <div>
+                                            <h1><code>H1</code>Heading...</h1>
+                                            <h2><code>H2</code>Heading...</h2>
+                                            <h3><code>H3</code>Heading...</h3>
+                                            <h4><code>H4</code>Heading...</h4>
+                                            <h5><code>H5</code>Heading...</h5>
+                                            <h6><code>H6</code>Heading...</h6>
+                                        </div>
+                                        <div>
+                                            <p><code>P</code> can simply be a paragraph</p>
+                                            <p><code>A</code> can be a <a href="./">link</a></p>
+                                            <p><code>STRONG</code> can be <strong>bold</strong></p>
+                                            <p><code>U</code> can be <u>underlined</u></p>
+                                            <p><code>EM</code> can be <em>emphasised</em></p>
+                                            <p><code>SMALL</code> can be <small>small</small></p>
+                                            <p><code>CODE</code> can be <code>code</code></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <code>HR</code>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <code>PRE &gt; CODE</code>
+                                        <pre><code>alert('this could work!');</code></pre>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <code>IMG</code>
+                                        </div>
+                                        <img src='http://via.placeholder.com/340x280' alt='Example image'>
+                                    </div>
+                                </article>
+                            </section>
+                            <section>
+                                <a name="lists"></a>
+                                <h3>Lists</h3>
+                                <article class="grid">
+                                    <div>
+                                        <code>UL</code>
+                                        <ul>
+                                            <li><code>LI</code>List Item</li>
+                                            <li><code>LI</code>List Item</li>
+                                            <li><code>LI</code>List Item</li>
+                                            <li><code>LI</code>List Item</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <code>OL</code>
+                                        <ol>
+                                            <li><code>LI</code>List Item</li>
+                                            <li><code>LI</code>List Item</li>
+                                            <li><code>LI</code>List Item</li>
+                                            <li><code>LI</code>List Item</li>
+                                        </ol>
+                                    </div>
+                                    <div></div>
+                                    <div></div>
+                                </article>
+                            </section>
+                            <section>
+                                <a name="forms"></a>
+                                <h3>Forms</h3>
+                                <article>
+                                    <form>
+                                        <div>
+                                            <label for='id'>User id (read only)</label>
+                                            <input name='id' id='id' value='R2D2' readonly>
+                                        </div>
+                                        <div>
+                                            <label for='email'>Email</label>
+                                            <input type='email' name='email' id='email' placeholder='email@example.com'>
+                                        </div>
+                                        <div>
+                                            <label for='password'>Password</label>
+                                            <input type='password' name='password' id='password'>
+                                        </div>
+
+                                        <div>
+                                            <label for='disabled'>Random disabled input</label>
+                                            <input disabled name='disabled' id='disabled'
+                                                placeholder='Because why not?'>
+                                        </div>
+
+                                        <div>
+                                            <label for='selected'>Prefered theme</label>
+                                            <select name="selected" id="">
+                                                <option value="">Choose One</option>
+                                                <option value="light">Light</option>
+                                                <option value="dark">Dark</option>
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <label for='about'>About me</label>
+                                            <textarea name='about' id='about'
+                                                placeholder='I am a textarea...'></textarea>
+                                        </div>
+
+                                        <div>
+                                            <input type='checkbox' name='remember' id='remember' checked>
+                                            <label for='remember'>Remember me</label>
+                                        </div>
+
+                                        <p>
+                                            <button>Cancel</button>
+                                            <input type='submit'>
+                                        </p>
+                                    </form>
+                                </article>
+                            </section>
+                            <section>
+                                <a name="table"></a>
+                                <h3>Tables</h3>
+                                <article>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>One</th>
+                                                <th>Two</th>
+                                                <th>There</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Data</td>
+                                                <td>Data</td>
+                                                <td>Data</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data</td>
+                                                <td>Data</td>
+                                                <td>Data</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data</td>
+                                                <td>Data</td>
+                                                <td>Data</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </article>
+                            </section>
+                            <section>
+                                <a name="utilities"></a>
+                                <h3>Utility</h3>
+                                <article>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th><code>.grid</code></th>
+                                                <td>dynamic grid layout helper</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </article>
+                            </section>
+                        </article>
+                    </section>
+
+                    
+                
             </section>
         </main>
 
