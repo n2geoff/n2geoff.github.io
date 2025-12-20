@@ -24,7 +24,7 @@
         <div id="app"></div>
     </main>
     <script type="module">
-        import { h,router } from "./js/mite.full.min.js";
+        import { h,route } from "./js/mite.full.min.js";
         import { Counter } from "./components/Counter.js";
         import { Todo } from "./components/Todo.js";
 
@@ -46,7 +46,7 @@
             todos: []
         }
 
-        router("#app", routes, state);
+        route("#app", routes, state);
     </script>
 </body>
 
