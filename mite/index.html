@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mite JS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.sand.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons-css/css/feather.min.css">
+</head>
+<body>
+    <main>
+        <div id="app"></div>
+    </main>
+    <script type="module">
+        import { h,router,Link,navigate } from './mite/js/mite.full.min.js';
+        import {Counter} from "./mite/components/Counter.js";
+        import {Todo} from "./mite/components/Todo.js";
+
+        // --- Components ---
+
+        const Navigation = () => h('nav',{ class: 'container' },[
+            h('ul',{},h('li',{},h('strong',{},'🚀 Mite JS'))),
+            h('ul',{},
+                h('li',{},Link({ href: '/' },'Home')),
+                h('li',{},Link({ href: '/docs' },'Docs')),
+                h('li',{},h('a',{ href: 'https://github.com/n2geoff/mite#readme', target: "_NEW", class: 'secondary' },'GitHub'))
+            )
+        ]);
+
+        const Hero = () => h('header',{ class: 'container',style: 'padding: 4rem 0; text-align: center;' },[
+            h('h2',{},'The ~2KB Reactive Engine'),
+            h('p',{},'Build high-fidelity prototypes at light speed. No build steps. No bloat. Just pure reactivity.'),
+            h('div',{ class: 'grid',style: 'max-width: 400px; margin: auto;' },
+                h('button',{ onclick: () => navigate('/docs') },'Get Started'),
+                h('a',{ href: '#demo',role: 'button', class: 'outline' },'Live Demo')
+            )
+        ]);
+
+        const Features = () => h('section',{ class: 'container',id: 'features' },[
+            h('div',{ class: 'grid' },
+                h('article',{},
+                    h('header',{},h('strong',{},'📦 Light Weight')),
+                    h('p',{},'Zero bloat. With just two exports: `h` & `mount` you can build high-performance reactive UIs in ~2KB.')
+                ),
+                h('article',{},
+                    h('header',{},h('strong',{},'🔋 Included Minimalism')),
+                    h('p',{}, "Everything you need, nothing you don't.Built-in parametric routing and state management. all-in... one file!")
+                ),
+                h('article',{},
+                    h('header',{},h('strong',{},'🎨 Pure Javascript')),
+                    h('p',{},"No build step required. Pair with Pico CSS or Chart.js instantly—it’s just standard, unadulterated JavaScript.")
+                )
+            )
+        ]);
+
+        function LiveDemo(state,update) {
+            return h("section",{ class: "container", id: "demo" },[
+                h('h2',{},'Interactive Demos'),
+                h("p", {}, [
+                    h("em", {}, "We got demos?!"),
+                ]),
+                h("article", {class: "grid"}, [
+                    Counter(state,update),
+                    Todo(state,update)
+                ])
+            ]);
+        }
+
+        // --- Pages ---
+
+        const Home = (state,update) => h('div',{key: 'home'},[
+            Navigation(),
+            Hero(),
+            Features(),
+            h("br", {style: "margin: 2rem"}),
+            LiveDemo(state,update),
+            h('footer',{ class: 'container grid' },[
+                h('small',{style: "text-align: center"},'Built with Mite | @copyright 2025 | All rights reserved.')
+            ])
+        ]);
+
+        const Docs = () => h('div',{key: 'docs'},[
+            Navigation(),
+            h('main',{ class: 'container' },
+                h('article',{},
+                    h('h2',{},'Documentation'),
+                    h('p',{},'Installation is as simple as importing the module.'),
+                    h('pre',{},h('code',{},`import { h, mount } from './mite.full.min.js';`)),
+                    h("p", {}, [
+                        h("a", {href: "https://raw.githubusercontent.com/n2geoff/mite/refs/heads/main/dist/mite.full.min.js", target: "_NEW"}, "Get it here")
+                    ])
+                )
+            )
+        ]);
+
+        // --- Initialization ---
+
+        const routes = {
+            '/': Home,
+            '/docs': Docs,
+            '404': () => h('h1',{},'404')
+        };
+
+        const state = {
+            count: 0,
+            todos: []
+        };
+
+        router('#app',routes, state);
+    </script>
+</body>
+</html>

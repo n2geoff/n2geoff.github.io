@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.sand.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons-css/css/feather.min.css">
+</head>
+
+<body>
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong>Examples</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/examples">Home</a></li>
+                <li><a href="#/counter">Counter</a></li>
+                <li><a href="#/todo">Todo</a></li>
+            </ul>
+        </nav>
+        <div id="app"></div>
+    </main>
+    <script type="module">
+        import { h,router } from "./js/mite.full.min.js";
+        import { Counter } from "./components/Counter.js";
+        import { Todo } from "./components/Todo.js";
+
+        function App(state, update) {
+            return h("section", {class: "grid"}, [
+                Counter(state, update),
+                Todo(state, update)
+            ]);
+        }
+
+        const routes = {
+            "/": App,
+            "/counter": Counter,
+            "/todo": Todo
+        };
+
+        const state = {
+            count: 0,
+            todos: []
+        }
+
+        router("#app", routes, state);
+    </script>
+</body>
+
+</html>
