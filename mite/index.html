@@ -6,13 +6,18 @@
     <title>Mite JS</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.sand.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons-css/css/feather.min.css">
+    <style>
+        button > i {margin-right: .5rem}
+
+    </style>
 </head>
 <body>
     <main>
         <div id="app"></div>
     </main>
     <script type="module">
-        import { h,route,Link,navigate } from './js/mite.full.min.js';
+        import { h,route,Link,navigate } from './js/mite.min.js';
+        import {TranspilerTool} from './pages/ConverterPage.js';
         import {Counter} from "./components/Counter.js";
         import {Todo} from "./components/Todo.js";
 
@@ -23,6 +28,7 @@
             h('ul',{},
                 h('li',{},Link({ href: '/' },'Home')),
                 h('li',{},Link({ href: '/docs' },'Docs')),
+                h('li',{},Link({ href: '/converter' },'Converter')),
                 h('li',{},h('a',{ href: 'https://github.com/n2geoff/mite#readme', target: "_NEW", class: 'secondary' },'GitHub'))
             )
         ]);
@@ -79,15 +85,28 @@
             ])
         ]);
 
+        const Converter = (state, update) => {
+            return h("div", {key: "converter"}, [
+                Navigation(),
+                h('main',{ class: 'container' },
+                    h('article',{},
+                        h('h2',{},'Converter'),
+                        h('p',{},'Convert raw HTML to HyperScript Syntax'),
+                        TranspilerTool(state, update)
+                    )
+                )
+            ])
+        }
+
         const Docs = () => h('div',{key: 'docs'},[
             Navigation(),
             h('main',{ class: 'container' },
                 h('article',{},
                     h('h2',{},'Documentation'),
                     h('p',{},'Installation is as simple as importing the module.'),
-                    h('pre',{},h('code',{},`import { h, mount } from './mite.full.min.js';`)),
+                    h('pre',{},h('code',{},`import { h, mount } from './mite.min.js';`)),
                     h("p", {}, [
-                        h("a", {href: "https://raw.githubusercontent.com/n2geoff/mite/refs/heads/main/dist/mite.full.min.js", target: "_NEW"}, "Get it here")
+                        h("a", {href: "https://raw.githubusercontent.com/n2geoff/mite/refs/heads/main/dist/mite.min.js", target: "_NEW"}, "Get it here")
                     ])
                 )
             )
@@ -98,6 +117,7 @@
         const routes = {
             '/': Home,
             '/docs': Docs,
+            '/converter': Converter,
             '404': () => h('h1',{},'404')
         };
 

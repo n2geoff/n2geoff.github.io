@@ -1,4 +1,4 @@
-import {h} from "../js/mite.full.min.js";
+import {h} from "../js/mite.min.js";
 
 export const Counter = (state,update) => h('article',{ style: {}}, [
     h("header", {}, [
