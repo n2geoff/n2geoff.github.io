@@ -1,7 +1,7 @@
 import {h} from "../js/mite.min.js";
 import { htmlToH } from "../js/converter.js";
 
-export const TranspilerTool = (state,update) => {
+export const TranspilerTool = ({state,update}) => {
 
     const handleConvert = () => {
         const input = document.getElementById('html-input').value;
