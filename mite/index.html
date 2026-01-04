@@ -16,7 +16,7 @@
         <div id="app"></div>
     </main>
     <script type="module">
-        import { h,route,Link,navigate } from './js/mite.min.js';
+        import { h,mount,} from './js/mite.min.js';
         import {TranspilerTool} from './pages/ConverterPage.js';
         import {Counter} from "./components/Counter.js";
         import {Todo} from "./components/Todo.js";
@@ -25,12 +25,13 @@
 
         const Navigation = () => h('nav',{ class: 'container' },[
             h('ul',{},h('li',{},h('strong',{},'🚀 Mite JS'))),
-            h('ul',{},
-                h('li',{},Link({ href: '/' },'Home')),
-                h('li',{},Link({ href: '/docs' },'Docs')),
-                h('li',{},Link({ href: '/converter' },'Converter')),
-                h('li',{},h('a',{ href: 'https://github.com/n2geoff/mite#readme', target: "_NEW", class: 'secondary' },'GitHub'))
-            )
+            h('ul', [
+
+                h('li', [h('a', { href: '#/' },'Home')]),
+                h('li', [h('a', { href: '#/docs' },'Docs')]),
+                h('li', [h('a', { href: '#/converter' },'Converter')]),
+                h('li', h('a',{ href: 'https://github.com/n2geoff/mite#readme', target: "_NEW", class: 'secondary' },'GitHub'))
+            ])
         ]);
 
         const Hero = () => h('header',{ class: 'container',style: 'padding: 4rem 0; text-align: center;' },[
@@ -126,7 +127,7 @@
             todos: []
         };
 
-        route('#app',routes, state);
+        mount('#app',{routes, state});
     </script>
 </body>
 </html>

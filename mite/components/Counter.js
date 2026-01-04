@@ -1,6 +1,6 @@
 import {h} from "../js/mite.min.js";
 
-export const Counter = (state,update) => h('article',{ style: {}}, [
+export const Counter = ({state,update}) => h('article',{ style: {}}, [
     h("header", {}, [
         h("h3", {}, "Counter"),
         h("em", {}, "The quinisential counter example")

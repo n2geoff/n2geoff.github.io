@@ -1,6 +1,6 @@
 import { h } from "../js/mite.min.js";
 
-export const Todo = (state,update) => {
+export const Todo = ({state,update}) => {
 
     const add = () => {
         if (!state.draftText.trim()) return;
